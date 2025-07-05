@@ -12,7 +12,7 @@ const firebaseConfig = \{\
 \pard\pardeftab720\partightenfactor0
 
 \f1\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2  apiKey: \cf4 \strokec4 "***REMOVED***"\cf2 \strokec2 ,\cb1 \
+\outl0\strokewidth0 \strokec2  apiKey: \cf4 \strokec4 "AIzaSyDNlN-eA1dpGy0ecukF0xJGgoqSXcQE9TM"\cf2 \strokec2 ,\cb1 \
 \cb3 \'a0 authDomain: \cf4 \strokec4 "medicine-tracker-6f4ca.firebaseapp.com"\cf2 \strokec2 ,\cb1 \
 \cb3 \'a0 databaseURL: \cf4 \strokec4 "https://medicine-tracker-6f4ca-default-rtdb.europe-west1.firebasedatabase.app"\cf2 \strokec2 ,\cb1 \
 \cb3 \'a0 projectId: \cf4 \strokec4 "medicine-tracker-6f4ca"\cf2 \strokec2 ,\cb1 \

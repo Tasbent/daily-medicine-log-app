@@ -4,7 +4,7 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration (provided by you)
 const firebaseConfig = {
-  apiKey: "***REMOVED***",
+  apiKey: "AIzaSyDNlN-eA1dpGy0ecukF0xJGgoqSXcQE9TM",
   authDomain: "medicine-tracker-6f4ca.firebaseapp.com",
   databaseURL: "https://medicine-tracker-6f4ca-default-rtdb.europe-west1.firebasedatabase.app",
   projectId: "medicine-tracker-6f4ca",

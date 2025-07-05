@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { db } from './firebase'; // Your existing database connection
 import { collection, doc, setDoc, onSnapshot, deleteDoc } from "firebase/firestore";
 
+
 // --- Helper Function to get the last 7 dates ---
 // It returns an array of objects, e.g., [{ date: Date, id: "2025-07-05" }]
 const getLast7Days = () => {
