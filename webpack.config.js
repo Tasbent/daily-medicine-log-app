@@ -1,9 +1,10 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   // This tells webpack where to start reading your code
   // It's like telling someone "start reading the story from this page"
-  entry: './app.js',
+  entry: './src/index.js',
   
   // This tells webpack where to save the processed code
   // We're creating a 'public' folder to keep source and built code separate
@@ -39,5 +40,10 @@ module.exports = {
   },
   
   // Production mode makes the output smaller and faster
-  mode: 'production'
+  mode: 'production',
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'src/index.html'
+    })
+  ]
 };
