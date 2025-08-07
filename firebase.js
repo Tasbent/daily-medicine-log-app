@@ -2,19 +2,25 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
-// Your web app's Firebase configuration (provided by you)
-const firebaseConfig = {
-  apiKey: "AIzaSyDNlN-eA1dpGy0ecukF0xJGgoqSXcQE9TM",
-  authDomain: "medicine-tracker-6f4ca.firebaseapp.com",
-  databaseURL: "https://medicine-tracker-6f4ca-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "medicine-tracker-6f4ca",
-  storageBucket: "medicine-tracker-6f4ca.appspot.com",
-  messagingSenderId: "526944861480",
-  appId: "1:526944861480:web:0235aef69ff7f16169a41d"
-};
+// Fetch the Firebase configuration from the server
+async function getFirebaseConfig() {
+  const response = await fetch('/getFirebaseConfig');
+  if (!response.ok) {
+    throw new Error('Failed to fetch Firebase config');
+  }
+  return response.json();
+}
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
+// Initialize Firebase and export the db object
+let db;
+let app;
 
-// Get a reference to the Firestore database
-export const db = getFirestore(app);
+try {
+    const firebaseConfig = await getFirebaseConfig();
+    app = initializeApp(firebaseConfig);
+    db = getFirestore(app);
+} catch (error) {
+    console.error("Error initializing Firebase:", error);
+}
+
+export { db };
